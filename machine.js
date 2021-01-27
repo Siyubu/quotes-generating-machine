@@ -27,7 +27,7 @@ const quotes = [
 
     }
 ];
-
+const color=['#00FFFF','#0000FF','#ADD8E6','#800080','#FF00FF','#808080','#A52A2A','#800000','#008000','#808000']
 window.onload= init
 function init(){
     generateQuote();  
@@ -35,6 +35,7 @@ function init(){
 function generateQuote(){
     let twitterLink="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22"
     let num = Math.floor(Math.random() * quotes.length)
+    let col=Math.floor(Math.random() * color.length)
     let newQuote = quotes[num];
     let quoteLinkFormat=newQuote.quote.replaceAll(" ","%20")
     twitterLink+=quoteLinkFormat +"%22";
@@ -44,4 +45,6 @@ function generateQuote(){
     $('#text').html(newQuote.quote);
     $('#author').html(newQuote.author);
     $('#tweet-quote').attr("href",twitterLink)
+    $("body").css("background-color",color[col])
+    $("#text").css("color",color[col])
 }

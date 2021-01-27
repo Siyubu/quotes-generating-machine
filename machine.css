@@ -1,13 +1,6 @@
-#quote-box {
-    border-radius: 3px;
-    position: relative;
-    width: 450px;
-    padding: 40px 50px;
-    display: table;
-    background-color: #fff;
-}
+
 #author{
-    color: rgb(251, 51, 85);
+    color: black;
 }
 body {
     background-color: #333;
