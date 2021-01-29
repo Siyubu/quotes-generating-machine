@@ -28,7 +28,8 @@ const quotes = [
     }
 ];
 const color=['#00FFFF','#0000FF','#ADD8E6','#800080','#FF00FF','#808080','#A52A2A','#800000','#008000','#808000']
-window.onload= init
+//window.onload= init
+document.addEventListener("DOMContentLoaded", init, false);
 function init(){
     generateQuote();  
 }
