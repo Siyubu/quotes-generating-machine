@@ -43,9 +43,9 @@ function generateQuote(){
     let authorLinkFormat=newQuote.author.replaceAll(" ","%20")
     twitterLink+='-'+ authorLinkFormat
 
-    $('#text').html(newQuote.quote);
-    $('#author').html(newQuote.author);
-    $('#tweet-quote').attr("href",twitterLink)
-    $("body").css("background-color",color[col])
-    $("#text").css("color",color[col])
+    document.getElementById('text').innerHTML = newQuote.quote;
+    document.getElementById('author').innerHTML= newQuote.author;
+    document.getElementById('tweet-quote').href = twitterLink;
+    document.getElementsByTagName("body").style.backgroundColor = color[col];
+    document.getElementById("text").style.color = color[col];
 }
